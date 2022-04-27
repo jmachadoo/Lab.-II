@@ -1,56 +1,37 @@
-package sofas;
-
-public class sofa {
-	Float preco;
+public class Sofa {
+	Double preco;
 	String cor;
-	Float lugares;
-	
+	Integer lugares;
 
-	public sofa(
-			float preco,
-			String cor,
-			Float lugares)
-			
-{		
-		
-
-		this.preco=preco;
-		this.cor= cor;
-		this.lugares=lugares;
-		
-}
-
-	public float get_preco() {
-		return preco;
+	public String exibir() {
+		return "----------\n" + "Preco: " + this.preco + "\n" + "Cor: " + this.cor + "\n" + "Lugares: " + this.lugares
+				+ "\n----------";
 	}
-		
-		public float get_lugares(float lugares) {
-			return lugares;
-		}
-		
-		public static void main(String[] args) {
 
-			
-			sofa S1 = new sofa ( "  " );
-			sofa S2 = new sofa ( "  " );
-			sofa S3 = new sofa ( "  " );
-			sofa S4 = new sofa ( "  " );
-			
-			S1.preco ();
-			S1.cor ();
-			S1.lugares();
-			
-			S2.preco (1449);
-			S2.cor (bege);
-			S2.lugares(4);
-			
-			S3.preco (1199);
-			S3.cor (marrom);
-			S3.lugares(4);
-			
-			S4.preco (542);
-			S4.cor (cinza);
-			S4.lugares(3);
-			
-}
+	public static void main(String[] args) {
+
+		Sofa S1 = new Sofa();
+
+		S1.preco = 1696.4;
+		S1.cor = "cinza";
+		S1.lugares = 4;
+
+		S2.preco = 1449.0;
+		S2.cor = "bege";
+		S2.lugares = 4;
+
+		S3.preco = 1199.0;
+		S3.cor = "marrom";
+		S3.lugares = 4;
+
+		S4.preco = 542.0;
+		S4.cor = "cinza";
+		S4.lugares = 3;
+
+		System.out.println(S1.exibir());
+		System.out.println(S2.exibir());
+		System.out.println(S3.exibir());
+		System.out.println(S4.exibir());
+
+	}
 }
